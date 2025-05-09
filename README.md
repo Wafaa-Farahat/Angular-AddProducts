@@ -2,6 +2,11 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
 
+## Website demo:
+
+
+https://github.com/user-attachments/assets/25d2012b-620f-4ea7-b0e6-152ebefb5479
+
 ## Overview
 This is a simple Angular website with multiple pages/components for basic functionality. 
 The application includes standard pages like Home, About, Products, Login, and Register, along with a 404 Not Found page for handling invalid routes.
@@ -24,8 +29,5 @@ The application includes standard pages like Home, About, Products, Login, and R
 - TypeScript
 - HTML/CSS
 
-## Website demo:
 
-
-https://github.com/user-attachments/assets/25d2012b-620f-4ea7-b0e6-152ebefb5479
 
