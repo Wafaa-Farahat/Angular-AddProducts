@@ -1,0 +1,45 @@
+
+
+<!-- Hero Section starts -->
+<div class="container-fluid" style="min-height: 100vh; background-color: #fff;">
+    <div class="row align-items-center justify-content-center" style="height: 100%;">
+
+        <!-- Text section -->
+        <div class="col-md-4 text-center text-md-start p-5" style="text-align: left; padding-left: 50px;">
+            <h1 class="mb-3">Hello 👋 </h1>
+            <h1 class="fw-bold" style="color: #198754;">Tech Products </h1>
+
+            <!-- Updated paragraph with increased font size and adjusted position -->
+            <p class="mb-4" style="color: #6b7280; font-size: 1.5em;">
+                Website For Lab5 "Routing"<br>
+                Initial Page Route.<br>
+            </p>
+            
+            <!-- Buttons with larger size and toggle styles -->
+            <div class="d-flex justify-content-center justify-content-md-start gap-3" style="margin-top: 150px;">
+                <button class="btn btn-outline-success rounded-pill px-5 py-3"
+                (click)="navigateToRegister()"
+                routerLink="/register"
+                    (mouseenter)="toggleButtonStyles(true)"
+                    (mouseleave)="toggleButtonStyles(false)">
+                    Register
+                </button>
+                <button class="btn btn-success rounded-pill px-5 py-3"
+                (click)="navigateToLogin()"
+                routerLink="/login"
+                    [ngClass]="{'btn-outline-success': registerHover, 'text-muted': registerHover, 'border-muted': registerHover, 'bg-white': registerHover}">
+                    Login
+                </button>
+            </div>
+        </div>
+
+        <!-- Image section -->
+        <div class="col-md-8 text-center p-5">
+            <div class="position-relative d-inline-block" style="background-color: #198754; border-radius: 20px; padding: 30px 20px;">
+                <img src="Images/prod.png" alt="Profile" class="img-contain rounded-pill" style="max-width: 700px; height: 500px;">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Hero Section ends -->

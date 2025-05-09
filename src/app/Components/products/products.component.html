@@ -1,0 +1,66 @@
+<div class="d-flex flex-column align-items-center">
+    <h1 class="text-white text-center w-25 rounded-4" style="background-color: #198754; padding: 15px 0;">
+      Add Product
+    </h1>
+  
+    <div class="card p-4 mt-4 shadow-sm" style="border: 1px solid #198754; width: 100%; max-width: 450px;">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Product Name : </label>
+          <input type="text" class="form-control" formControlName="name" placeholder="Product Name">
+          <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="text-danger">
+            Name must be more than 3 characters.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Product Description : </label>
+          <input type="text" class="form-control" formControlName="description" placeholder="add Description">
+          <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched" class="text-danger">
+            Description must be more than 15 characters.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Product Image URL : </label>
+          <input type="text" class="form-control" formControlName="imgUrl" placeholder="add Image URL">
+          <div *ngIf="productForm.get('imgUrl')?.invalid && productForm.get('imgUrl')?.touched" class="text-danger">
+            Enter a valid online image URL.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Product Rate : </label>
+          <input type="number" class="form-control" formControlName="rate" placeholder="Rate Product">
+          <div *ngIf="productForm.get('rate')?.invalid && productForm.get('rate')?.touched" class="text-danger">
+            Rate must be between 1 and 5.
+          </div>
+        </div>
+  
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn w-75 text-white" style="background-color: #198754;">
+            Display
+          </button>
+        </div>
+            
+      </form>
+    </div>
+  
+    <!-- Display Products -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4" *ngFor="let product of products">
+          <div class="card mb-4 shadow-sm" style="min-height: 100%; width: 100%;">
+            <img [src]="product.imgUrl" class="card-img-top" alt="Product Image" style="height: 200px; object-fit: contain;">
+            <div class="card-body text-center bg-dark text-light">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text" style="font-size: small;">{{ product.description }}</p>
+              <h6>{{ product.rate }}/5 ⭐</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

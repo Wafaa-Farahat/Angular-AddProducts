@@ -1,0 +1,40 @@
+<div class="d-flex flex-column align-items-center">
+    <h1 class="text-white text-center w-25 rounded-4" style="background-color: #198754; padding: 15px 0;">
+Register   </h1>
+  
+    <div class="card p-4 mt-4 shadow-sm" style="border: 1px solid #198754; width: 100%; max-width: 450px;">
+      <form >
+        
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Enter Name : </label>
+          <input type="text" class="form-control" formControlName="name" placeholder="UserName">
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Password : </label>
+          <input type="password" class="form-control" formControlName="description" placeholder="contain chars &/\* , 1233...">
+        </div>
+        <div class="mb-3">
+            <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Confirm Password : </label>
+            <input type="password" class="form-control" formControlName="description" placeholder="confirm pass">
+          </div>
+    
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Email : </label>
+          <input type="text" class="form-control" formControlName="imgUrl" placeholder="Email">
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label w-35 text-dark font-weight-bold px-2 py-1" style="font-size: 1.2rem; font-weight: 700;">Age : </label>
+          <input type="number" class="form-control" formControlName="rate" placeholder="Rate Product">
+        </div>
+  
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn w-75 text-white" style="background-color: #198754;" routerLink="/home">
+            Register
+          </button>
+        </div>
+            
+      </form>
+    </div>
